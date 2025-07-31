@@ -1,10 +1,7 @@
-// Bring io lib into scope.
+use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 
-use rand::Rng;
-
-// Entry point of a Rust program
 fn main() {
     println!("Guess the number");
 
@@ -13,10 +10,8 @@ fn main() {
     loop {
         println!("Please input your guess.");
 
-        // create a mutatble variablee
         let mut guess = String::new();
 
-        // use stdin from io to take user input
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
